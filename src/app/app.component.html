@@ -466,6 +466,7 @@
     <a
       class="card"
       target="_blank"
+      data-test-id="material"
       rel="noopener"
       href="https://material.angular.io">
       <svg
@@ -658,7 +659,7 @@
   </div>
 
   <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
+  <div class="terminal" [ngSwitch]="selection.value" data-test-id="display">
     <pre *ngSwitchDefault>ng generate component xyz</pre>
     <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
     <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
