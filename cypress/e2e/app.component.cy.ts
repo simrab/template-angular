@@ -28,8 +28,20 @@ describe('click button to access library pages', () => {
     cy.get('[data-test-id=material]').within(() => {
       cy.root()
         .should('exist')
-        .and('have.attr', 'href', 'https://material.angular.io')
-        .click();
+        .and('have.attr', 'href', 'https://material.angular.io');
     });
+  });
+});
+describe('click button to access internal app views', () => {
+  it('tests click angular login btn to enter login page', () => {
+    cy.viewport(1440, 629);
+
+    cy.visit('http://localhost:4200/');
+
+    cy.get('[data-test-id=login]').within(() => {
+      cy.root().should('exist').and('have.attr', 'href', '/login').click();
+    });
+    cy.get('body > app-root > app-login > h1').should('exist').as('logintitle');
+    cy.get('@logintitle').should('contain', 'Login');
   });
 });
