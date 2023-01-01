@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import './scss/fonts/fonts';
+@import './scss/bootstrap/variables';
+
+.theme {
+  &.light-theme {
+    @import './scss/themes/light_theme';
+  }
+  &.dark-theme {
+    @import './scss/themes/dark_theme';
+  }
+}

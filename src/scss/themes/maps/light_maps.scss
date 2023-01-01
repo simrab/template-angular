@@ -1,0 +1,80 @@
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$grays: (
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900,
+);
+
+$blue: #593d7e;
+$ltblue: #def1ff;
+$indigo: #160336;
+$purple: #6f42c1;
+$pink: #e07fa7;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #f5a801;
+$green: #417202;
+$teal: #2093c9;
+$cyan: #275e9e;
+
+$colors-light: (
+  'blue': $blue,
+  'ltblue': $ltblue,
+  'purple': $purple,
+  'pink': $pink,
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'white': $white,
+  'gray': $gray-600,
+  'gray-dark': $gray-800,
+  'indigo': $indigo,
+);
+
+$primary: $ltblue;
+$secondary: $indigo;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $pink;
+$dark: $black;
+$highlight: $yellow;
+
+$light-theme: () !default;
+$light-theme: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+    'highlight': $highlight,
+  ),
+  $light-theme
+);
+
+$gradient: linear-gradient(180deg, rgba($white, 0.15), rgba($white, 0));

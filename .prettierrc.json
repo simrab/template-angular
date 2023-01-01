@@ -7,5 +7,15 @@
   "arrowParens": "avoid",
   "trailingComma": "es5",
   "bracketSameLine": true,
-  "printWidth": 80
+  "printWidth": 80,
+  "importOrder": [
+    "^@angular/(.*)$",
+    "^rxjs/(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "^@core/(.*)$",
+    "^@shared/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

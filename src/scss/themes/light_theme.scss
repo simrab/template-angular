@@ -1,0 +1,67 @@
+@import './maps/light_maps';
+
+$colors: map-merge($colors, $colors-light);
+$light-theme: map-merge($theme-colors, $light-theme);
+
+@import '../bootstrap/variables';
+
+@at-root .light-theme {
+  @each $color, $value in $colors-light {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  @each $color, $value in $light-theme {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  --#{$variable-prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
+  --#{$variable-prefix}font-monospace: #{inspect($font-family-monospace)};
+  --#{$variable-prefix}gradient: #{$gradient};
+  font-size: $font-size-root;
+
+  @if $enable-smooth-scroll {
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+  }
+}
+@import '../../../node_modules/bootstrap/scss/mixins'; // as mixins;
+@import '../../../node_modules/bootstrap/scss/utilities'; // as utilities;
+
+// Layout & components
+@import '../../../node_modules/bootstrap/scss/reboot'; // as reboot;
+@import '../../../node_modules/bootstrap/scss/type'; // as type;
+@import '../../../node_modules/bootstrap/scss/images'; // as images;
+@import '../../../node_modules/bootstrap/scss/containers'; // as containers;
+@import '../../../node_modules/bootstrap/scss/grid'; // as grid;
+//@import "../../../node_modules/bootstrap/scss/tables"; // as tables;
+@import '../../../node_modules/bootstrap/scss/forms'; // as forms;
+@import '../../../node_modules/bootstrap/scss/buttons'; // as buttons;
+@import '../../../node_modules/bootstrap/scss/transitions'; // as transitions;
+@import '../../../node_modules/bootstrap/scss/dropdown'; // as dropdown;
+@import '../../../node_modules/bootstrap/scss/button-group'; // as group;
+@import '../../../node_modules/bootstrap/scss/nav'; // as nav;
+@import '../../../node_modules/bootstrap/scss/navbar'; // as navbar;
+//@import "../../../node_modules/bootstrap/scss/card"; // as card;
+//@import "../../../node_modules/bootstrap/scss/accordion"; // as accordion;
+//@import "../../../node_modules/bootstrap/scss/breadcrumb"; // as breadcrumb;
+//@import "../../../node_modules/bootstrap/scss/pagination"; // as pagination;
+@import '../../../node_modules/bootstrap/scss/badge'; // as badge;
+@import '../../../node_modules/bootstrap/scss/alert'; // as alert;
+@import '../../../node_modules/bootstrap/scss/progress'; // as progress;
+@import '../../../node_modules/bootstrap/scss/list-group'; // as group;
+@import '../../../node_modules/bootstrap/scss/close'; // as close;
+@import '../../../node_modules/bootstrap/scss/toasts'; // as toasts;
+@import '../../../node_modules/bootstrap/scss/modal'; // as modal;
+//@import "../../../node_modules/bootstrap/scss/tooltip"; // as tooltip;
+//@import "../../../node_modules/bootstrap/scss/popover"; // as popover;
+//@import "../../../node_modules/bootstrap/scss/carousel"; // as carousel;
+//@import "../../../node_modules/bootstrap/scss/spinners"; // as spinners;
+//@import "../../../node_modules/bootstrap/scss/offcanvas"; // as offcanvas;
+
+// Helpers
+@import '../../../node_modules/bootstrap/scss/helpers'; // as helpers;
+
+// Utilities
+@import '../../../node_modules/bootstrap/scss/utilities/api'; // as api;
+// scss-docs-end import-stack
