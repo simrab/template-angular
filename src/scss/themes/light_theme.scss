@@ -6,12 +6,13 @@ $light-theme: map-merge($theme-colors, $light-theme);
 @import '../bootstrap/variables';
 
 @at-root .light-theme {
-  @each $color, $value in $colors-light {
+  @each $color, $value in $colors {
     --#{$variable-prefix}#{$color}: #{$value};
   }
 
   @each $color, $value in $light-theme {
     --#{$variable-prefix}#{$color}: #{$value};
+    --#{$variable-prefix}#{$color}-rgb: #{to-rgb($value)};
   }
 
   --#{$variable-prefix}font-sans-serif: #{inspect($font-family-sans-serif)};

@@ -1,17 +1,18 @@
 @import './maps/dark_maps';
 
 $colors: map-merge($colors, $colors-dark);
-$light-theme: map-merge($theme-colors, $dark-theme);
+$dark-theme: map-merge($theme-colors, $dark-theme);
 
 @import '../bootstrap/variables';
 
-@at-root .light-theme {
-  @each $color, $value in $colors-dark {
+@at-root .dark-theme {
+  @each $color, $value in $colors {
     --#{$variable-prefix}#{$color}: #{$value};
   }
 
-  @each $color, $value in $light-theme {
+  @each $color, $value in $dark-theme {
     --#{$variable-prefix}#{$color}: #{$value};
+    --#{$variable-prefix}#{$color}-rgb: #{to-rgb($value)};
   }
 
   --#{$variable-prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
