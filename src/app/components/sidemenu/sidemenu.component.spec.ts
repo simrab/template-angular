@@ -1,5 +1,4 @@
 import {
-  async,
   ComponentFixture,
   inject,
   TestBed,
@@ -7,7 +6,7 @@ import {
 } from '@angular/core/testing';
 
 import { SidemenuComponent } from './sidemenu.component';
-import { Router, RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LoginComponent } from '../../views/login/login.component';
 
