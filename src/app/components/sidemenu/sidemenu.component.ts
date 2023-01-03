@@ -1,4 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-sidemenu',
@@ -20,6 +25,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
     </aside>
   `,
   styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidemenuComponent {
   @Output() toggleTheme = new EventEmitter<void>();

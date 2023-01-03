@@ -6,6 +6,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, SidemenuComponent],
@@ -19,6 +20,7 @@ import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
     }),
     RouterOutlet,
     AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
