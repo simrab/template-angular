@@ -10,6 +10,7 @@ import {
 import { CustomInputComponent } from '../../components/custom-input/custom-input.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
+import { DynamicHostComponent } from '../../components/dynamic-host/dynamic-host.component';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
     ReactiveFormsModule,
     CustomInputComponent,
     FontAwesomeModule,
+    DynamicHostComponent,
   ],
   template: `
     <div>
@@ -45,6 +47,7 @@ import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
       </form>
       <button data-test-id="submitLogin" (click)="onSubmit()">Submit</button>
     </div>
+    <app-dynamic-host></app-dynamic-host>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./login.components.scss'],
